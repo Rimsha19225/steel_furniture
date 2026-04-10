@@ -1,40 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Steel Furniture - Full Stack Application
 
-## Getting Started
+A modern e-commerce platform for steel furniture, built with Next.js (frontend) and Node.js/Express (backend) with Neon database.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+furniture/
+├── frontend/          # Next.js frontend application
+│   ├── src/
+│   │   ├── app/      # Next.js app pages
+│   │   ├── components/
+│   │   └── config/   # API configuration
+│   ├── public/
+│   ├── package.json
+│   └── .env.local
+├── backend/          # Express.js backend API
+│   ├── routes/       # API route handlers
+│   ├── scripts/      # Database scripts
+│   ├── db.ts         # Database connection
+│   ├── schema.sql    # Database schema
+│   ├── server.ts     # Express server
+│   ├── package.json
+│   └── .env
+└── README.md         # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Setup Backend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd backend
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Copy environment file and configure
+cp .env.example .env
+# Edit .env with your Neon database URL
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Initialize database
+npm run db:init
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start backend server
+npm run dev
+```
 
-## Deploy on Vercel
+Backend will run on `http://localhost:3001`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Setup Frontend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# steel_furniture
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Configure backend URL in .env.local
+echo "NEXT_PUBLIC_BACKEND_URL=http://localhost:3001/api" > .env.local
+
+# Start development server
+npm run dev
+```
+
+Frontend will run on `http://localhost:3000`
+
+## Database Setup (Neon)
+
+1. Go to [Neon](https://neon.tech) and create an account
+2. Create a new project
+3. Copy the connection string from the dashboard
+4. Paste it in `backend/.env` as `DATABASE_URL`
+5. Run `npm run db:init` in the backend folder
+
+## Features
+
+- **User Authentication**: Signup, login, JWT-based sessions
+- **Product Catalog**: Browse, search, filter products
+- **Shopping Cart**: Add, update, remove items
+- **Orders**: Place orders, track order status
+- **Reviews**: Submit and view product reviews
+- **Responsive Design**: Mobile-friendly UI
+
+## API Endpoints
+
+See [backend/README.md](backend/README.md) for complete API documentation.
+
+## Tech Stack
+
+### Frontend
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### Backend
+- Node.js
+- Express
+- TypeScript
+- Neon (PostgreSQL)
+- JWT Authentication
+- bcryptjs
+
+## Environment Variables
+
+### Backend (.env)
+```env
+DATABASE_URL=your_neon_connection_string
+JWT_SECRET=your_secret_key
+PORT=3001
+FRONTEND_URL=http://localhost:3000
+```
+
+### Frontend (.env.local)
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:3001/api
+```
+
+## Development
+
+### Running Both Services
+
+Terminal 1 (Backend):
+```bash
+cd backend
+npm run dev
+```
+
+Terminal 2 (Frontend):
+```bash
+cd frontend
+npm run dev
+```
+
+## Deployment
+
+### Backend
+Deploy to Railway, Render, or any Node.js hosting platform.
+
+### Frontend
+Deploy to Vercel, Netlify, or any static hosting.
+
+Make sure to update the `NEXT_PUBLIC_BACKEND_URL` in production.
+
+## License
+
+MIT
 # furniture
-# furniture
-# steel_furniture
