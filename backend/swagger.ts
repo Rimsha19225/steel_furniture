@@ -14,7 +14,7 @@ const options: swaggerJsdoc.Options = {
     },
     servers: [
       {
-        url: 'http://localhost:8000',
+        url: 'https://rimshaarshad-furniture.hf.space',
         description: 'Development server'
       }
     ],

@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { User, Mail, Phone, MapPin, Lock, CheckCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 const API_BASE_URL = `${BACKEND_URL}/api`;
 
 interface FormData {

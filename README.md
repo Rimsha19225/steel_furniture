@@ -259,8 +259,8 @@ npm run db:init
 npm run dev
 ```
 
-Backend runs on `http://localhost:8000`
-API Documentation: `http://localhost:8000/api-docs`
+Backend runs on `https://rimshaarshad-furniture.hf.space`
+API Documentation: `https://rimshaarshad-furniture.hf.space/api-docs`
 
 ### 2. Setup Frontend
 
@@ -271,7 +271,7 @@ cd frontend
 npm install
 
 # Configure backend URL
-echo "NEXT_PUBLIC_BACKEND_URL=http://localhost:8000" > .env.local
+echo "NEXT_PUBLIC_BACKEND_URL=https://rimshaarshad-furniture.hf.space" > .env.local
 
 # Start development server
 npm run dev
@@ -320,7 +320,7 @@ Frontend runs on `http://localhost:3000`
 
 Full interactive API documentation is available via **Swagger UI** at:
 ```
-http://localhost:8000/api-docs
+https://rimshaarshad-furniture.hf.space/api-docs
 ```
 
 See [backend/README.md](backend/README.md) for detailed endpoint documentation.
@@ -367,7 +367,7 @@ FRONTEND_URL=http://localhost:3000
 
 ### Frontend (`frontend/.env.local`)
 ```env
-NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+NEXT_PUBLIC_BACKEND_URL=https://rimshaarshad-furniture.hf.space
 ```
 
 ---

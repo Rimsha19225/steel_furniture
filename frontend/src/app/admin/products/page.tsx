@@ -65,7 +65,7 @@ export default function AdminProducts() {
 
   const fetchProducts = async () => {
     try {
-      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
       const response = await fetch(`${API_URL}/api/products`);
 
       if (!response.ok) {

@@ -18,7 +18,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose }) => {
   const [showMessage, setShowMessage] = useState<boolean>(false);
   const router = useRouter();
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 
   const showSuccess = (msg: string) => {
     setSuccessMessage(msg);

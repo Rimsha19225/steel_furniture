@@ -6,7 +6,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { CheckCircle, Filter, ChevronDown, ChevronUp, Search, X } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 
 interface Product {
   id: string;

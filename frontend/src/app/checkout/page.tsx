@@ -9,7 +9,7 @@ import easypaisa from "../../../public/images/Easypaisa-logo.png";
 import jazzcash from "../../../public/images/Jazzcash-logo.png";
 import Swal from 'sweetalert2';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 
 export default function CheckoutPage() {
   const router = useRouter();

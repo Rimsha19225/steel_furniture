@@ -3,7 +3,7 @@ import { useState, FormEvent } from 'react';
 import { X, Upload, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 
 interface ProductFormData {
   name: string;

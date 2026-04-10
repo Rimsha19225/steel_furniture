@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import { useRouter, useParams } from 'next/navigation';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://rimshaarshad-furniture.hf.space';
 
 interface Product {
   id: string;
